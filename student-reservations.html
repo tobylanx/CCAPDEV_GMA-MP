@@ -1,0 +1,47 @@
+<html>
+<head>
+	<title>Make a Reservation</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<!-- Navigation Bar -->
+	<div class="topnav">
+		<a href="menu_st.html">Home</a>
+        	<a href="student-profile.html">Profile</a>
+        	<a class="active" href="student-reservation.html">Reservations</a>
+        	<a href="login.html" class="logout">Logout</a>
+	</div>
+
+	<!-- Reservation Section -->
+	<section id="make-reservation">
+		<h1>Make a Reservation</h1>
+		<form id="reservation-form">
+			<label for="lab">Select a Lab:</label>
+			<select name="lab" id="lab">
+				<option value="lab1">Lab 1</option>
+				<option value="lab2">Lab 2</option>
+				<option value="lab3">Lab 3</option>
+				<!-- dagdag pa here and ibahin lab name? -->
+			</select>
+			<br>
+
+			<label for="date">Select Date:</label>
+			<input type="date" id="date" name="date">
+			<br>
+
+			<label for="time">Select Time Slot:</label>
+			<select name="time" id="time">
+				<option value="slot1">9:00 AM - 9:30 AM</option>
+				<option value="slot2">9:30 AM - 10:00 AM</option>
+				<option value="slot3">10:00 AM - 10:30 AM</option>
+                		<!-- dagdag pa ng time -->
+			</select>
+			<br>
+		
+			<input type="submit" value="Reserve">
+		</form>
+	</section>
+
+	<script src="scripts.js"></script>
+</body>
+</html>

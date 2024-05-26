@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="login.css">
+        <script src="login.js"></script>
+
+        <title>BookMyLab Login Account</title>
+
+    </head>
+    <body>
+        <div class="container">
+            <h2>Login Your Account</h2>
+            <form name="login" action="menu_st.html" method="post" onsubmit="return validateLoginForm()">
+                <label for="dlsuemail">E-mail:</label>
+                <input type="email" name="dlsuemail" required><br>
+                <label for="password">Password:</label>
+                <input type="password" name="password" required><br>
+                <div class="button-container">
+                    <input type="submit" name="login" value="Login" class="login-btn">
+                </div>
+            </form>
+            <p id="message" class="hidden"></p>
+            <div class="register">
+                <p style="font-size: 15px;">No Account? <a href="register.html">Register</a></p>
+            </div>
+          </div>
+    </body>
+</html>

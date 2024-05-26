@@ -1,0 +1,40 @@
+<html>
+<head>
+	<title>Student Profile</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<!-- Navigation Bar -->
+	<div class="topnav">
+		<a href="menu_st.html">Home</a>
+		<a class="active" href="student-profile.html">Profile</a>
+		<a href="student-reservations.html">Reservations</a>
+		<a href="login.htmll" class="logout">Logout</a>
+		<input type="text" placeholder="Search...">
+	</div>
+
+	<!-- Profile Section -->
+	<section id="student-profile">
+        <h1>Profile of <span id="student-name">[Student Name]</span></h1>
+        <div class="profile-info">
+  		<div class="profile-pic">
+			<img src="default-profile-pic.jpg" alt="Profile Picture" id="profile-picture">
+		</div>
+		<div class="profile-details">
+			<p id="student-description">This is the student's description.</p>
+ 			<button onclick="editProfile()">Edit Profile</button>
+		</div>
+		</div>
+		<div class="profile-reservations">
+	<h2>Current Reservations</h2>
+ 	<ul id="reservations-list">
+ 		<li>Lab 1 - Seat 5 - 10:00 AM - 10:30 AM, 2024-05-26</li>
+                <li>Lab 2 - Seat 3 - 11:00 AM - 11:30 AM, 2024-05-27</li>
+                <!-- dagdag pa here >
+		</ul>
+	</div>
+	</section>
+
+	<script src="scripts.js"></script>
+</body>
+</html>
