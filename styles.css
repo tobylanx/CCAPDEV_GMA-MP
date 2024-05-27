@@ -1,6 +1,11 @@
+body {
+  background-color: #e1ebf6;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
 /* Add a black background color to the top navigation */
 .topnav {
-  background-color: #333;
+  background-color: #3a6da0;
   overflow: hidden;
 }
 
@@ -16,13 +21,13 @@
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: #bce5f5;
   color: black;
 }
 
 /* Add a color to the active/current link */
 .topnav a.active {
-  background-color: #00B4D8;
+  background-color: #98ccef;
   color: white;
 }
 
