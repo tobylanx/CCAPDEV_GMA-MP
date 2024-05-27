@@ -1,6 +1,7 @@
 body {
   background-color: #e1ebf6;
   margin: 0;
+  padding: 0;
   font-family: 'Roboto', sans-serif;
 }
 /* Add a black background color to the top navigation */
@@ -38,4 +39,95 @@ body {
   margin-top: 8px;
   margin-right: 16px;
   font-size: 17px;
+}
+.profile-details p {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-details button {
+  background-color: #88e0a4;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.profile-details button:hover {
+  opacity: 0.8;
+}
+
+.profile-reservations {
+  margin-top: 30px;
+}
+
+.profile-reservations h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.profile-reservations ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.profile-reservations li {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+#make-reservation {
+  background-color: #d0e4f1;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+#make-reservation h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+#reservation-form select,
+#reservation-form input[type="date"],
+#reservation-form input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+#reservation-form input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+#reservation-form input[type="submit"] {
+  background-color: #88e0a4;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#reservation-form input[type="submit"]:hover {
+  opacity: 0.8;
 }

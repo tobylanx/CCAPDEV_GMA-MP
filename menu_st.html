@@ -1,31 +1,35 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Student Menu</title>
-	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="menu.css">
 </head>
 <body>
 	<!-- Navigation Bar -->
 
 	<div class="topnav">
-		<a class="active" href="student-home.html">Home</a>
+		<a class="active" href="menu_st.html">Home</a>
 		<a href="student-profile.html">Profile</a>
+		<a href="schedule.html">Schedule</a>
 		<a href="student-reservations.html">Reservations</a>
 		<a href="login.html">Logout</a>
 		<input type="text" placeholder="Search...">
 	</div>
 
 	<!-- Main Menu -->
-	<section id="student-menu">
-        <h1>Welcome, <span id="student-name">[Student Name]</span></h1>
-        <ul style="list-style-type:none;">
-            <li><a href="student-view-slot-availability.html">View Slot Availability</a></li>
-            <li><a href="student-reserve.html">Reserve a Slot</a></li>
-            <li><a href="student-see-reservations.html">See My Reservations</a></li>
-            <li><a href="student-edit-profile.html">Edit Profile</a></li>
-            <li><a href="student-delete-account.html">Delete Account</a></li>
-        </ul>
-    </section>
-
-	<script src="scripts.js"></script>
+	<div class="container">
+        <a href="student-profile.html" class="box">
+            <h3>Your Account</h3>
+            <p>View and manage your account details and reservation history.</p>
+        </a>
+        <a href="schedule.html" class="box">
+            <h3>Schedule</h3>
+            <p>Check the schedule of laboratory rooms and their availability.</p>
+        </a>
+        <a href="student-reservations.html" class="box">
+            <h3>Reservations</h3>
+            <p>Make, edit, and view your lab reservations.</p>
+        </a>
+    </div>
 </body>
 </html>
