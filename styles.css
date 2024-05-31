@@ -1,18 +1,20 @@
-body {
-  background-color: #e1ebf6;
+body, html {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
+  background-color: #e1ebf6;
+  color: #333;
+  font-size: 16px;
 }
-/* Add a black background color to the top navigation */
+
 .topnav {
   background-color: #3a6da0;
   overflow: hidden;
+  position: relative;
 }
 
-/* Style the links inside the navigation bar */
 .topnav a {
-  float: left;
+  float: right;
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
@@ -20,92 +22,145 @@ body {
   font-size: 17px;
 }
 
-/* Change the color of links on hover */
 .topnav a:hover {
   background-color: #bce5f5;
-  color: black;
+  color: white;
 }
 
-/* Add a color to the active/current link */
 .topnav a.active {
   background-color: #98ccef;
   color: white;
 }
 
-.topnav input[type=text] {
-  float: right;
+.topnav input[type="text"] {
+  float: left;
   padding: 6px;
   border: none;
   margin-top: 8px;
-  margin-right: 16px;
+  margin-left: 16px;
   font-size: 17px;
 }
-.profile-details p {
-  color: #666;
-  font-size: 16px;
-  line-height: 1.5;
-  margin-bottom: 15px;
-}
 
-.button-container {
+
+.boxes {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
 }
 
-.profile-details button {
-  background-color: #88e0a4;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+.box {
+  width: 300px;
+  height: 200px;
+  background-color: #e0f7fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  color: #060000;
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
 }
 
-.profile-details button:hover {
-  opacity: 0.8;
+.box:hover {
+  background-color: #98ccef;
 }
 
-.profile-reservations {
-  margin-top: 30px;
+.sidebar {
+  width: 250px;
+  position: absolute;
+  height: 100vh;
+  background-color: #1c4b7a; /* Slightly darker shade for contrast */
+  padding: 20px;
+  text-align: center;
 }
 
-.profile-reservations h2 {
-  color: #333;
-  font-size: 24px;
+.link {
+  text-align: left;
+}
+
+
+.student-profile img.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 60px; /* Fully round */
   margin-bottom: 10px;
+  border: 4px solid #98ccef; /* Light blue border */
 }
 
-.profile-reservations ul {
+.student-profile h3, .student-profile a {
+  color: #ffffff;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.student-profile a {
+  text-decoration: none;
+  color: #bce5f5;
+  font-weight: 600;
+}
+
+.student-profile a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.main-content {
+  margin-left: 280px; /* Adjusted for sidebar width */
+  padding: 20px;
+  background-color: #e1ebf6;
+  min-height: 100vh;
+}
+
+.main-content h2 {
+  color: #2c3e50;
+  border-bottom: 2px solid #98ccef;
+  padding-bottom: 10px;
+}
+
+.reservations-list {
   list-style-type: none;
   padding: 0;
+  margin-top: 20px;
 }
 
-.profile-reservations li {
-  color: #666;
-  font-size: 16px;
+.reservations-list li {
+  background-color: #e1ebf6; /* Light blue background for entries */
+  padding: 10px;
   margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-#make-reservation {
-  background-color: #d0e4f1;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.make-reservation {
+  background-color: #e0f7fa;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   max-width: 600px;
-  margin: 20px auto;
+  margin: 40px auto;
 }
 
-#make-reservation h1 {
-  color: #333;
-  text-align: center;
+.make-reservation h1 {
+  color: #006064;
   margin-bottom: 20px;
+  text-align: center;
 }
 
+.reservation-form label {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+  color: #004d40;
+}
 
-#reservation-form select,
-#reservation-form input[type="date"],
-#reservation-form input[type="number"] {
+.reservation-form select, 
+.reservation-form input[type="date"], 
+.reservation-form input[type="number"],
+.reservation-form input[type="checkbox"] {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
@@ -114,20 +169,80 @@ body {
   box-sizing: border-box;
 }
 
-#reservation-form input[type="checkbox"] {
-  margin-right: 5px;
-}
-
-#reservation-form input[type="submit"] {
-  background-color: #88e0a4;
-  color: #fff;
+.reservation-form input[type="submit"], 
+.addSeatButton {
+  background-color: #00796b;
+  color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 12px 20px;
   border-radius: 5px;
   cursor: pointer;
+  margin: 10px 0;
   transition: background-color 0.3s;
 }
 
-#reservation-form input[type="submit"]:hover {
-  opacity: 0.8;
+.reservation-form input[type="submit"]:hover, 
+.addSeatButton:hover {
+  background-color: #004d40;
+}
+
+.seat-entry {
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom-container {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.bottom-container label {
+  color: #004d40;
+}
+
+.schedule-section {
+  padding: 20px;
+}
+
+.schedule-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.legend {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.legend span {
+  display: flex;
+  align-items: center;
+}
+
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(20, 30px);
+  grid-gap: 5px;
+}
+
+.schedule-grid .slot {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+}
+
+.schedule-grid .available {
+  background-color: white;
+}
+
+.schedule-grid .booked {
+  background-color: grey;
 }

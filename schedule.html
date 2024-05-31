@@ -2,17 +2,31 @@
 <head>
 	<title>Schedule and Availability</title>
 	<link rel="stylesheet" href="styles.css">
+	<script src="schedule.js"></script>
 </head>
 <body>
 	<!-- Navigation Bar -->
 	<div class="topnav">
-		<a class="active" href="menu_st.html">Home</a>
-		<a href="student-profile.html">Profile</a>
-		<a href="schedule.html">Schedule</a>
-		<a href="student-reservations.html">Reservations</a>
-		<a href="login.html">Logout</a>
 		<input type="text" placeholder="Search...">
+		<a href="login.html">Logout</a>
+        <a href="menu_st.html">Home</a>
+		<a href="student-profile.html">Profile</a>
+		<a class="active" href="schedule.html">Schedule</a>
+		<a href="student-reservations.html">Reservations</a>
 	</div>
 
+	<section class="schedule-section">
+        <h1>Lab Schedule and Availability</h1>
+        <div class="schedule-container">
+            <!-- Legend -->
+            <div class="legend">
+                <span><input type="checkbox" disabled class="available">Available</span>
+                <span><input type="checkbox" disabled class="booked">Booked</span>
+            </div>
+
+            <!-- Schedule Grid -->
+            <div class="schedule-grid" id="scheduleGrid"></div>
+        </div>
+    </section>
 </body>
 </html>

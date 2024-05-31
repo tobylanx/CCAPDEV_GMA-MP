@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.container {
+    width: 420px;
+    background: rgba(18, 61, 153, 0.75); /* Semi-transparent dark background */
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.input-box label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.container input, .container select {
+    width: 100%;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    font-size: 16px;
+    color: #fff;
+    padding: 12px 20px;
+    outline: none;
+}
+
+input::placeholder {
+    color: #ddd;
+}
+
+.form-footer, .button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.form-footer a, .register p a, .login p a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease-in-out;
+}
+
+.form-footer a:hover, .register p a:hover, .login p a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.register-btn, .login-btn {
+    width: 100%;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register-btn:hover, .login-btn:hover {
+    background-color: #367c39;
+}
+
+.register {
+    text-align: center;
+    margin-top: 20px;
+}

@@ -4,36 +4,38 @@
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-	<!-- Navigation Bar -->
-	<div class="topnav">
-		<a class="active" href="menu_st.html">Home</a>
-		<a href="student-profile.html">Profile</a>
+    <!-- Navigation Bar -->
+    <div class="topnav">
+        <input type="text" placeholder="Search...">
+        <a href="login.html">Logout</a>
+        <a href="menu_st.html">Home</a>
+		<a class="active" href="student-profile.html">Profile</a>
 		<a href="schedule.html">Schedule</a>
 		<a href="student-reservations.html">Reservations</a>
-		<a href="login.html">Logout</a>
-		<input type="text" placeholder="Search...">
-	</div>
+    </div>
 
-	<!-- Profile Section -->
-	<section id="student-profile">
-        <h1>Profile of <span id="student-name">[Student Name]</span></h1>
-        <div class="profile-info">
-            <div class="profile-pic">
-                <img src="default-profile-pic.jpg" alt="Profile Picture" id="profile-picture">
-            </div>
-            <div class="profile-details">
-                <p id="student-description">This is the student's description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius tellus sed augue ultrices, vel bibendum eros luctus.</p>
-                <button onclick="editProfile()">Edit Profile</button>
-                <button onclick="deleteAccount()">Delete Account</button>
+    <!-- Sidebar for Profile Management -->
+    <div class="sidebar">
+        <div class="student-profile">
+            <img src="profile.png" alt="Student Profile Picture" class="profile-img">
+            <h3>[Student Name]</h3>
+            <div class="link">
+            <a href="#">Edit Profile</a>
+            <a href="#">Edit Reservation</a>
+            <a href="#">Cancel Reservation</a>
+            <a href="#">Reservation History</a>
+            <a href="#">Delete Profile</a>
             </div>
         </div>
-        <div class="profile-reservations">
-            <h2>Current Reservations</h2>
-            <ul id="reservations-list">
-                <li>Lab 1 - Seat 5 - 10:00 AM - 10:30 AM, 2024-05-26</li>
-                <li>Lab 2 - Seat 3 - 11:00 AM - 11:30 AM, 2024-05-27</li>
-            </ul>
-        </div>
-    </section>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <h2>Current Reservations</h2>
+        <ul class="reservations-list">
+            <li>Lab A - Seat 23, Date: 2024-06-01, Time: 12:00-15:00</li>
+            <li>Lab B - Seat 15, Date: 2024-06-02, Time: 10:00-12:00</li>
+        </ul>
+    </div>
 </body>
 </html>
