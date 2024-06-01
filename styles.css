@@ -1,3 +1,4 @@
+/* Universal Styles */
 body, html {
   margin: 0;
   padding: 0;
@@ -7,6 +8,7 @@ body, html {
   font-size: 16px;
 }
 
+/* Top Navigation Bar */
 .topnav {
   background-color: #3a6da0;
   overflow: hidden;
@@ -41,7 +43,7 @@ body, html {
   font-size: 17px;
 }
 
-
+/* Box Styles */
 .boxes {
   display: flex;
   justify-content: center;
@@ -61,7 +63,6 @@ body, html {
   padding: 20px;
   text-align: center;
   text-decoration: none;
-  border-radius: 10px;
   transition: background-color 0.3s ease;
 }
 
@@ -69,26 +70,35 @@ body, html {
   background-color: #98ccef;
 }
 
+/* Sidebar Styles */
 .sidebar {
   width: 250px;
   position: absolute;
   height: 100vh;
-  background-color: #1c4b7a; /* Slightly darker shade for contrast */
+  background-color: #1c4b7a;
   padding: 20px;
   text-align: center;
 }
 
-.link {
+.sidebar .link {
   text-align: left;
 }
-
 
 .student-profile img.profile-img {
   width: 120px;
   height: 120px;
-  border-radius: 60px; /* Fully round */
+  border-radius: 60px;
   margin-bottom: 10px;
-  border: 4px solid #98ccef; /* Light blue border */
+  border: 4px solid #98ccef;
+}
+
+.profile-bio {
+  color: #ffffff;
+  margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 1.6;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .student-profile h3, .student-profile a {
@@ -108,8 +118,9 @@ body, html {
   text-decoration: underline;
 }
 
+/* Main Content Styles */
 .main-content {
-  margin-left: 280px; /* Adjusted for sidebar width */
+  margin-left: 280px;
   padding: 20px;
   background-color: #e1ebf6;
   min-height: 100vh;
@@ -128,33 +139,39 @@ body, html {
 }
 
 .reservations-list li {
-  background-color: #e1ebf6; /* Light blue background for entries */
+  background-color: #e1ebf6;
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Make Reservation Section */
 .make-reservation {
-  background-color: #e0f7fa;
+  background-color: #ffffff;
   padding: 30px;
-  border-radius: 10px;
+  border-radius: 15px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   max-width: 600px;
   margin: 40px auto;
+  transition: all 0.3s ease;
+}
+
+.make-reservation:hover {
+  transform: scale(1.02);
 }
 
 .make-reservation h1 {
-  color: #006064;
+  color: #000b0c;
   margin-bottom: 20px;
   text-align: center;
 }
 
 .reservation-form label {
   display: block;
-  text-align: left;
-  margin-bottom: 5px;
-  color: #004d40;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: bold;
 }
 
 .reservation-form select, 
@@ -162,11 +179,19 @@ body, html {
 .reservation-form input[type="number"],
 .reservation-form input[type="checkbox"] {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border-radius: 5px;
+  padding: 12px;
+  margin-bottom: 20px;
   border: 1px solid #ccc;
+  border-radius: 8px;
   box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.reservation-form select:focus,
+.reservation-form input[type="date"]:focus,
+.reservation-form input[type="number"]:focus,
+.reservation-form input[type="checkbox"]:focus {
+  border-color: #3a6da0;
 }
 
 .reservation-form input[type="submit"], 
@@ -174,75 +199,110 @@ body, html {
   background-color: #00796b;
   color: white;
   border: none;
-  padding: 12px 20px;
-  border-radius: 5px;
+  padding: 15px 30px;
+  border-radius: 8px;
   cursor: pointer;
   margin: 10px 0;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .reservation-form input[type="submit"]:hover, 
 .addSeatButton:hover {
   background-color: #004d40;
+  transform: translateY(-2px);
 }
 
-.seat-entry {
-  display: flex;
-  flex-direction: column;
-}
-
-.bottom-container {
-  display: flex;
-  flex-direction: column;
-}
-
-
-.bottom-container label {
-  color: #004d40;
-}
-
-.schedule-section {
-  padding: 20px;
-}
-
-.schedule-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.legend {
-  display: flex;
-  gap: 10px;
+.addSeatButton {
   margin-bottom: 20px;
 }
 
-.legend span {
+/* Schedule Section */
+.schedule-section {
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 960px;
+}
+
+.selection-area {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.selection-area label {
+  font-weight: bold;
+  margin-right: 10px;
+  display: block;
 }
 
 .schedule-grid {
   display: grid;
-  grid-template-columns: repeat(20, 30px);
-  grid-gap: 5px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  justify-content: center;
 }
 
-.schedule-grid .slot {
-  width: 30px;
-  height: 30px;
-  border: 1px solid #ccc;
-  cursor: pointer;
+.slot {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 10px;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 14px;
+  text-align: center;
+  background-color: #ccffcc;
+  color: #333;
+  cursor: pointer;
 }
 
-.schedule-grid .available {
-  background-color: white;
+.slot div {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
-.schedule-grid .booked {
-  background-color: grey;
+.slot:hover {
+  transform: scale(1.05);
+}
+
+.slot.available {
+  background-color: #ccffcc;
+}
+
+.slot.booked {
+  background-color: #ffcccc;
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.color-box {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.color-box.available {
+  background-color: #ccffcc;
+}
+
+.color-box.booked {
+  background-color: #ffcccc;
 }

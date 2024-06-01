@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Profile</title>
+    <link rel="stylesheet" href="st_profile.css">
+</head>
+<body>
+    <div class="topnav">
+        <input type="text" placeholder="Search...">
+        <a href="login.html">Logout</a>
+        <a href="menu_st.html">Home</a>
+        <a href="student-profile.html">Profile</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="student-reservations.html">Reservations</a>
+    </div>
+
+    <div class="main-content">
+        <h2>Edit Profile</h2>
+        <!-- Form to edit profile picture and description -->
+        <form class="edit-profile-form" action="student-profile.html" method="post">
+            <label for="profile-img">Profile Picture:</label>
+            <input type="file" id="profile-img" name="profile-img" accept="image/*">
+            
+            <label for="profile-desc">Profile Description:</label>
+            <textarea id="profile-desc" name="profile-desc" rows="4" cols="50" placeholder="Enter your profile description..."></textarea>
+            
+            <input type="submit" value="Save Changes">
+        </form>
+    </div>
+</body>
+</html>
+
+
