@@ -43,31 +43,54 @@ body, html {
   font-size: 17px;
 }
 
-/* Box Styles */
-.boxes {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 20px;
+/* Menu Section */
+.menu {
+  background-color: #e1ebf6;
+  text-align: center;
+  color: rgb(23, 19, 19);
+  padding: 40px 20px; /* Adjusted padding for better spacing */
 }
 
-.box {
-  width: 300px;
-  height: 200px;
-  background-color: #e0f7fa;
+.menu .intro {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.menu .intro h1 {
+  color: #3a6da0;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.menu .intro p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.menu .boxes {
+  margin: 0;
+  padding: 80px;
+  background-color: #79bbc3;
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  color: #060000;
-  margin: 20px;
-  padding: 20px;
-  text-align: center;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
 }
 
-.box:hover {
+.menu .boxes:hover {
   background-color: #98ccef;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #2E86C1; /* Darker shade for contrast */
+}
+
+.menu a h1 {
+  margin-bottom: 30px;
+}
+
+.menu a p {
+  margin: 10px;
+  color: #555; /* Lighter shade for text */
 }
 
 /* Sidebar Styles */
