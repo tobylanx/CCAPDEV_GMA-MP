@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cancel Reservation</title>
+    <link rel="stylesheet" href="st_profile.css">
+</head>
+<body>
+    <div class="topnav">
+        <input type="text" placeholder="Search...">
+        <a href="login.html">Logout</a>
+        <a href="menu_st.html">Home</a>
+        <a class="active" href="student-profile.html">Profile</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="student-reservations.html">Reservations</a>
+    </div>
+
+    <div class="main-content">
+        <h2>Cancel Reservation</h2>
+        <form class="cancel-reservation-form" id="cancelReservationForm" action="student-profile.html" method="post">
+            <label for="reservation-select">Select Reservation to Cancel:</label>
+            <select name="reservation" id="reservation-select" class="reservation-select">
+                <option value="reservation1">Reservation 1 - Lab A - Seat 23, 2024-06-01, 12:00-15:00</option>
+                <option value="reservation2">Reservation 2 - Lab B - Seat 15, 2024-06-02, 10:00-12:00</option>
+                <!-- Add more options as needed -->
+            </select>
+
+            <label for="cancellation-reason">Reason for Cancellation:</label>
+            <textarea id="cancellation-reason" name="cancellation-reason" rows="4" cols="50" placeholder="Enter the reason for cancellation..."></textarea>
+
+            <div class="bottom-container">
+                <input type="submit" value="Cancel Reservation">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
