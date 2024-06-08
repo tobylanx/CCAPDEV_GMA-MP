@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles3.css">
+        <script src="login.js"></script>
+        <title>BookMyLab Technician Login</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="logo-container">
+                <img src="BookMyLab-SquareLogo.png" alt="BookMyLab Square Logo">
+            </div>
+            <h2>Login Your Account</h2>
+            <form name="techLogin" action="menu_tech.html" method="post" onsubmit="return validateTechLoginForm()">
+                <div class="input-box">
+                    <label for="techEmail">E-mail</label>
+                    <input type="email" name="techEmail" required>
+                </div>
+                <div class="input-box">
+                    <label for="techPassword">Password</label>
+                    <input type="password" name="techPassword" required>
+                </div>
+                <div class="form-footer">
+                    <label>
+                        <input type="checkbox" name="remember"> Remember Me
+                    </label>
+                    <a href="forgot_pass.html">Forgot Password?</a>
+                </div>
+                <div class="button-container">
+                    <input type="submit" name="techLogin" value="Login" class="login-btn">
+                </div>
+            </form>
+            <div class="register">
+                <p>No Account? <a href="register.html">Register</a></p>
+            </div>
+            <div class="student-login">
+                <p>Student? <a href="st_login.html">Login here</a></p>
+            </div>
+        </div>
+    </body>
+</html>

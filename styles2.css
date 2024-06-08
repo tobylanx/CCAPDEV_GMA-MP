@@ -1,4 +1,4 @@
-/*CSS Styles for Menu Technician and Student*/
+/*CSS Styles for Reservations Menu Technician and Student*/
 
 body, html {
     margin: 0;
@@ -72,7 +72,7 @@ body, html {
     padding: 10px 40px;
     background-color: #f7f9fc;
     margin: 20px auto;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     max-width: 800px;
 }

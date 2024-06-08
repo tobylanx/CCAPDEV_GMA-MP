@@ -1,0 +1,39 @@
+<html>
+<head>
+	<title>Reserve for a Student</title>
+	<link rel="stylesheet" href="styles6.css">
+    <script src="reserve.js"></script>
+</head>
+<body>
+	<div class="topnav">
+        <div class="search-container">
+            <input type="text" placeholder="Search...">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </div>
+        <div class="menu-links">
+            <a href="menu_tech.html">Home</a>
+            <a href="tech_profile.html">Profile</a>
+            <a href="tech_schedule.html">Schedule</a>
+            <a class="active" href="tech_reservations_menu.html">Reservations</a>
+            <a href="tech_login.html">Logout</a>
+        </div>
+    </div>
+    <section class="main-content">
+        <h1>Remove Reservation</h1>
+        <form class="remove-reservation-form" method="post" id="removeReservationForm">
+            <label for="reservation-select">Select Reservation to Remove:</label>
+                <select name="reservation" id="reservation-select" class="reservation-select">
+                    <option value="reservation1">Reservation 1 - Lab 1 - Seat 20, Date: 2024-06-01, 12:00-15:00</option>
+                    <option value="reservation2">Reservation 2 - Lab 1 - Seat 15, Date: 2024-06-02, 10:00-12:00</option>
+                    <option value="reservation3">Reservation 3 - Lab 2 - Seat 03, Date: 2024-06-06, 12:00-12:30</option>
+                    <option value="reservation4">Reservation 4 - Lab 2 - Seat 17, Date: 2024-06-10, 3:00-5:00</option>
+                    <option value="reservation5">Reservation 5 - Lab 2 - Seat 08, Date: 2024-06-22, 9:00-12:00</option>
+                </select>
+            <div class="bottom-container">
+                <input type="submit" value="Save Changes">
+                <a class="cancel-btn" href="tech_reservations_menu.html">Cancel</a>
+            </div>
+        </form>
+    </section>
+</body>
+</html>

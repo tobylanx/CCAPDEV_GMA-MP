@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reservation Successful</title>
+    <link rel="stylesheet" href="styles6.css">
+</head>
+<body>
+    <div class="topnav">
+        <div class="search-container">
+            <input type="text" placeholder="Search...">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </div>
+        <div class="menu-links">
+            <a href="menu_tech.html">Home</a>
+            <a href="tech_profile.html">Profile</a>
+            <a href="tech_schedule.html">Schedule</a>
+            <a class="active" href="tech_reservations_menu.html">Reservations</a>
+            <a href="tech_login.html">Logout</a>
+        </div>
+    </div>
+    <section class="make-reservation">
+        <h1>Reservation Successful</h1>
+        <div class="reservation-details">
+            <p>Lab: <span id="lab"></span></p>
+            <p>Date: <span id="date"></span></p>
+            <p>Time: <span id="time"></span></p>
+            <p>Seats: <span id="seats"></span></p>
+            <p>Anonymous: <span id="anonymous"></span></p>
+        </div>
+        <button class="back-button" onclick="window.location.href='tech_reservations.html'">Back to Reservations</button>
+    </section>
+</body>
+</html>

@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const addSeatButton = document.getElementById('addSeatButton');
     const seatContainer = document.getElementById('seatContainer');
 
-    // Function to generate seat options
     const generateSeatOptions = (selectedSeats = []) => {
         const options = [];
         for (let i = 1; i <= 20; i++) {
@@ -13,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
         return options.join('');
     };
 
-    // Initial population of the first seat select
     const initialSeatSelect = seatContainer.querySelector('.seat-select');
     initialSeatSelect.innerHTML = generateSeatOptions();
 
@@ -37,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
         seatContainer.appendChild(seatEntry);
     });
 
-    // Update available options when a seat is selected
     seatContainer.addEventListener('change', (e) => {
         if (e.target.classList.contains('seat-select')) {
             const selectedSeats = Array.from(seatContainer.querySelectorAll('.seat-select'))
@@ -45,10 +42,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             Array.from(seatContainer.querySelectorAll('.seat-select')).forEach(select => {
                 const currentValue = select.value;
-                select.innerHTML = generateSeatOptions(selectedSeats);
-                select.value = currentValue; // Preserve the current value
+                select.innerHTML = generateSeatOptions(selectedSeats.filter(seat => seat !== currentValue));
+                select.value = currentValue;
             });
         }
     });
 });
-

@@ -1,0 +1,158 @@
+/*CSS Styles for Schedule Technician and Student*/
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #e1ebf6;
+    color: #333;
+    font-size: 16px;
+    height: 100%;
+}
+
+.topnav {
+    background-color: #3a6da0;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu-links {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu-links a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-links a:hover {
+    background-color: #79bbc3;
+    color: white;
+}
+
+.menu-links a.active {
+    background-color: #79bbc3;
+    color: white;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-container input[type=text] {
+    padding: 10px;
+    margin: 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search-container button {
+    padding: 10px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.schedule-section {
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    max-width: 960px;
+}
+
+.selection-area {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.selection-area label {
+  font-weight: bold;
+  margin-right: 10px;
+  display: block;
+}
+
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  justify-content: center;
+}
+
+.slot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 14px;
+  text-align: center;
+  background-color: #ccffcc;
+  color: #333;
+  cursor: pointer;
+}
+
+.slot div {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.slot:hover {
+  transform: scale(1.05);
+}
+
+.slot.available {
+  background-color: #ccffcc;
+}
+
+.slot.booked {
+  background-color: #ffcccc;
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.color-box {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.color-box.available {
+  background-color: #ccffcc;
+}
+
+.color-box.booked {
+  background-color: #ffcccc;
+}

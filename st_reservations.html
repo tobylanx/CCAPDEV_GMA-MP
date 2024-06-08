@@ -1,12 +1,11 @@
-<!DOCTYPE html>
 <html>
 <head>
-    <title>Edit Existing Reservation</title>
-    <link rel="stylesheet" href="styles6.css">
-    <script src="edit_reserve.js"></script>
+	<title>Make a Reservation</title>
+	<link rel="stylesheet" href="styles6.css">
+    <script src="reserve.js"></script>
 </head>
 <body>
-    <div class="topnav">
+	<div class="topnav">
         <div class="search-container">
             <input type="text" placeholder="Search...">
             <button type="submit"><i class="fa fa-search"></i></button>
@@ -15,23 +14,14 @@
             <a href="menu_st.html">Home</a>
             <a href="st_profile.html">Profile</a>
             <a href="st_schedule.html">Schedule</a>
-            <a class="active" href="st_reservations_menu.html">Reservations</a>
+            <a class="active" href="st_reservations.html">Reservations</a>
             <a href="st_login.html">Logout</a>
         </div>
     </div>
 
-    <div class="main-content">
-        <h2>Edit Existing Reservation</h2>
-        <form class="edit-reservation-form" action="st_reservations_menu.html" method="post" id="editReservationForm">
-            <label for="reservation-select">Select Reservation to Edit:</label>
-            <select name="reservation" id="reservation-select" class="reservation-select">
-                <option value="reservation1">Reservation 1 - Lab 1 - Seat 20, Date: 2024-06-01, 12:00-15:00</option>
-                <option value="reservation2">Reservation 2 - Lab 1 - Seat 15, Date: 2024-06-02, 10:00-12:00</option>
-                <option value="reservation3">Reservation 3 - Lab 2 - Seat 03, Date: 2024-06-06, 12:00-12:30</option>
-                <option value="reservation4">Reservation 4 - Lab 2 - Seat 17, Date: 2024-06-10, 3:00-5:00</option>
-                <option value="reservation5">Reservation 5 - Lab 2 - Seat 08, Date: 2024-06-22, 9:00-12:00</option>
-            </select>
-
+    <section class="make-reservation">
+        <h1>Make a Reservation</h1>
+        <form class="reservation-form" id="reservationForm">
             <label for="lab-select">Select a Lab:</label>
             <select name="lab" class="lab-select">
                 <option value="lab1">Lab 1</option>
@@ -72,11 +62,16 @@
                 <button type="button" class="addSeatButton" id="addSeatButton">Add Another Seat</button>
             </div>
             <div class="bottom-container">
-                <input type="submit" value="Save Changes">
-                <a class="cancel-btn" href="st_reservations_menu.html">Cancel</a>
+            <div class="anonymous-check-container">
+                <input type="checkbox" class="anonymous-check" name="anonymous" id="anonymous-check">
+                <label for="anonymous-check">Anonymous Reservation</label>
+            </div>
+        </div>
+            <div class="bottom-container">
+                <input type="submit" value="Reserve">
+                <button type="button" class="cancel-btn" onclick="location.href='tech_reservations_menu.html'">Cancel</button>
             </div>
         </form>
-    </div>
+    </section>
 </body>
 </html>
-

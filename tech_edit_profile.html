@@ -3,7 +3,6 @@
 <head>
     <title>Edit Profile</title>
     <link rel="stylesheet" href="styles6.css">
-    <script src="st_edit_profile.js"></script>
 </head>
 <body>
     <div class="topnav">
@@ -12,26 +11,26 @@
             <button type="submit"><i class="fa fa-search"></i></button>
         </div>
         <div class="menu-links">
-            <a href="menu_st.html">Home</a>
-            <a class="active" href="st_profile.html">Profile</a>
-            <a href="st_schedule.html">Schedule</a>
-            <a href="st_reservations_menu.html">Reservations</a>
-            <a href="st_login.html">Logout</a>
+            <a href="menu_tech.html">Home</a>
+            <a class="active" href="tech_profile.html">Profile</a>
+            <a href="tech_schedule.html">Schedule</a>
+            <a href="tech_reservations_menu.html">Reservations</a>
+            <a href="tech_login.html">Logout</a>
         </div>
     </div>
 
     <div class="main-content">
         <h2>Edit Profile</h2>
-        <form class="edit-profile-form" action="st_profile.html" method="post" onsubmit="return validateForm()">
+        <form class="edit-profile-form" action="tech_profile.html" method="post">
             <label for="profile-img">Profile Picture:</label>
             <input type="file" id="profile-img" name="profile-img" accept="image/*">
             
             <label for="profile-desc">Profile Description:</label>
             <textarea id="profile-desc" name="profile-desc" rows="4" cols="50" placeholder="Enter your profile description..."></textarea>
-
+            
             <div class="button-container">
                 <input type="submit" value="Save Changes">
-                <a class="cancel-btn" href="st_profile.html">Cancel</a>
+                <a class="cancel-btn" href="tech_profile.html">Cancel</a>
             </div>
         </form>
     </div>
