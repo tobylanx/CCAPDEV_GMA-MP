@@ -72,9 +72,9 @@ To access BookMyLab web application, you may download it through [Google Drive](
     ```
     Ensure that you have Node.js installed.
 
-* Open the file you have previously downloaded and open _index.html_. **(<-ccheck pa if sa index talaga dapat)**
+* Open the file you have previously downloaded and open _login.html_. 
 * Create an account if you don't have one or log in to your account.
-* Naviagte the website depending on what you wish to accomplish with it.
+* Navigate the website depending on what you wish to accomplish with it.
 * To stop MongoDB from running, simply press the control key + C.
 
 ### Features of BookMyLab
