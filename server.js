@@ -570,6 +570,27 @@ app.get('/api/user-profile', authenticateUser, async (req, res) => {
   }
 });
 
+app.post('/api/delete-profile', authenticateUser, async (req, res) => {
+    const { email, password } = req.body;
+
+    try {
+        const user = await User.findOne({ email });
+        if (!user) {
+            return res.status(404).json({ error: 'User not found' });
+        }
+
+        if (user.password !== password) {
+            return res.status(400).json({ error: 'Incorrect password' });
+        }
+
+        await User.deleteOne({ _id: user._id });
+        res.clearCookie('sessionToken');
+        res.status(200).json({ message: 'Profile deleted successfully' });
+    } catch (err) {
+        res.status(500).json({ error: 'Error deleting profile: ' + err.message });
+    }
+});
+
 app.get('/api/search-user', authenticateUser, async (req, res) => {
   const { query } = req.query;
 
