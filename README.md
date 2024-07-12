@@ -55,6 +55,7 @@ If you opt to host the Community Edition locally, you may download MongoDB Compa
 
 However, if you opt to use the cloud, you must create an account and access the database through this [link](https://account.mongodb.com/account/register?_ga=2.232786590.1042261310.1720516851-2116443035.1717582412&_gac=1.254493434.1720615095.CjwKCAjw4ri0BhAvEiwA8oo6FyWi4GZGXj_8Hfx_TOynE03VMh_Wl5-0cz5jRSQyhi7SSXJ5P7jQRxoCQj4QAvD_BwE)
 
+To gain access to our MongoDB database, you may paste this [link](mongodb+srv://member2:gmaMPd4t4b4se@cluster0.1cvdsh7.mongodb.net/) to your MongoDB Compass to connect to our database.
 
 2. **Node.js** must also be installed in your machines in order to run the web application successfully. Official packages for all the major platforms are available through this [link](https://nodejs.org/download/).
 
