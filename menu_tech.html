@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <head>
     <title>Technician Menu</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="menu.js"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/menu.js"></script>
+    <script src="/js/search.js" defer></script>
 </head>
 <body>
     <div class="topnav">
         <div class="search-container">
-            <input type="text" placeholder="Search...">
-            <button type="submit"><i class="fa fa-search"></i></button>
+            <input type="text" id="search-input" placeholder="Search by email, first name, or last name...">
+            <button type="button" id="search-button"><i class="fa fa-search"></i></button>
         </div>
+        <div id="search-results" class="search-results"></div>
+          
         <div class="menu-links">
             <a class="active" href="menu_tech.html">Home</a>
             <a href="tech_profile.html">Profile</a>
@@ -20,7 +23,7 @@
     </div>
 
     <div class="logo-container">
-        <img src="BookMyLab-LandscapeLogo.png" alt="BookMyLab Landscape Logo">
+        <img src="/images/BookMyLab-LandscapeLogo.png" alt="BookMyLab Landscape Logo">
     </div>
 
     <div class="intro">
@@ -31,7 +34,7 @@
     <div class="menu">
         <div class="box">
             <a href="tech_profile.html">
-                <img src="profile-icon2.png" alt="Profile Icon">
+                <img src="/images/profile-icon2.png" alt="Profile Icon">
                 <h1>Your Account</h1>
                 <p>View and manage your account details and reservation history.</p>
             </a>
@@ -39,7 +42,7 @@
 
         <div class="box">
             <a href="tech_schedule.html">
-                <img src="schedule-icon.png" alt="Schedule Icon">
+                <img src="/images/schedule-icon.png" alt="Schedule Icon">
                 <h1>Schedule</h1>
                 <p>Check the schedule of laboratory rooms and their availability.</p>
             </a>
@@ -47,7 +50,7 @@
 
         <div class="box">
             <a href="tech_reservations_menu.html">
-                <img src="reservation-icon.png" alt="Reservations Icon">
+                <img src="/images/reservation-icon.png" alt="Reservations Icon">
                 <h1>Reservations</h1>
                 <p>Make, edit, and view your lab reservations.</p>
             </a>

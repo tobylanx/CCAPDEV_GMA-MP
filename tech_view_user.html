@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Profile</title>
+  <link rel="stylesheet" href="/css/styles5.css">
+  <script src="/js/view_user.js" defer></script>
+  <script src="/js/search.js" defer></script>
+</head>
+<body>
+  <div class="topnav">
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Search by email, first name, or last name...">
+      <button type="button" id="search-button"><i class="fa fa-search"></i></button>
+    </div>
+    <div id="search-results" class="search-results"></div>
+    
+    <div class="menu-links">
+        <a href="menu_tech.html">Home</a>
+        <a href="tech_profile.html">Profile</a>
+        <a href="tech_schedule.html">Schedule</a>
+        <a href="tech_reservations_menu.html">Reservations</a>
+        <a href="login.html">Logout</a>
+    </div>
+  </div>
+
+  <div class="sidebar">
+    <div class="user-profile">
+      <img src="/images/profile.png" alt="User Profile Picture" class="profile-img" id="profile-pic">
+      <h3 id="user-name"></h3>
+      <p class="user-bio" id="user-bio"></p>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <h2>Current Reservations</h2>
+    <ul id="reservations-list" class="reservations-list"></ul>
+  </div>
+</body>
+</html>

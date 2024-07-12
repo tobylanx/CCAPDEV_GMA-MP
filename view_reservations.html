@@ -1,76 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reserve for a Student</title>
-    <link rel="stylesheet" href="styles6.css">
-    <script src="reserve.js"></script>
+    <title>View All Reservations</title>
+    <link rel="stylesheet" href="/css/styles6.css">
+    <link rel="stylesheet" href="/css/view_all_reservations.css">
+    <script src="/js/view_reserve.js" defer></script>
+    <script src="/js/search.js" defer></script>
 </head>
 <body>
     <div class="topnav">
         <div class="search-container">
-            <input type="text" placeholder="Search...">
-            <button type="submit"><i class="fa fa-search"></i></button>
+            <input type="text" id="search-input" placeholder="Search by email, first name, or last name...">
+            <button type="button" id="search-button"><i class="fa fa-search"></i></button>
         </div>
+        <div id="search-results" class="search-results"></div>
+          
         <div class="menu-links">
             <a href="menu_tech.html">Home</a>
             <a href="tech_profile.html">Profile</a>
             <a href="tech_schedule.html">Schedule</a>
             <a class="active" href="tech_reservations_menu.html">Reservations</a>
-            <a href="tech_login.html">Logout</a>
+            <a href="login.html">Logout</a>
         </div>
     </div>
-
     <div class="main-content">
         <section class="see-reservations">
             <h1>All Reservations</h1>
-            <div class="reservations">
+            <div class="reservations" id="reservations-container">
                 <table id="reservations-table">
                     <thead>
                         <tr>
                             <th>Lab</th>
                             <th>Seat</th>
-                            <th>Time</th>
+                            <th>Reserved by</th>
                             <th>Date</th>
+                            <th>Time</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Lab 1</td>
-                            <td>Seat 05</td>
-                            <td>10:00 AM - 10:30 AM</td>
-                            <td>2024-05-26</td>
-                        </tr>
-                        <tr>
-                            <td>Lab 1</td>
-                            <td>Seat 03</td>
-                            <td>11:00 AM - 11:30 AM</td>
-                            <td>2024-05-27</td>
-                        </tr>
-                        <tr>
-                            <td>Lab 2</td>
-                            <td>Seat 09</td>
-                            <td>9:00 AM - 9:30 AM</td>
-                            <td>2024-05-28</td>
-                        </tr>
-                        <tr>
-                            <td>Lab 2</td>
-                            <td>Seat 15</td>
-                            <td>10:00 AM - 11:30 AM</td>
-                            <td>2024-05-28</td>
-                        </tr>
-                        <tr>
-                            <td>Lab 2</td>
-                            <td>Seat 19</td>
-                            <td>4:00 AM - 5:00 AM</td>
-                            <td>2024-05-28</td>
-                        </tr>
+                        
                     </tbody>
                 </table>
             </div>
+            <button class="back-button" onclick="location.href='tech_reservations_menu.html'">Back to Reservation Menu</button>
         </section>
-        <button class="back-button" onclick="location.href='tech_reservations_menu.html'">Back to Reservation Menu</button>
     </div>
 </body>
 </html>

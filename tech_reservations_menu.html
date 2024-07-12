@@ -1,26 +1,29 @@
 <html>
 <head>
 	<title>Manage Reservations</title>
-	<link rel="stylesheet" href="styles2.css">
-    <script src="reserve.js"></script>
+	<link rel="stylesheet" href="/css/styles2.css">
+    <script src="/js/reserve.js"></script>
+    <script src="/js/search.js" defer></script>
 </head>
 <body>
 	<div class="topnav">
         <div class="search-container">
-            <input type="text" placeholder="Search...">
-            <button type="submit"><i class="fa fa-search"></i></button>
+            <input type="text" id="search-input" placeholder="Search by email, first name, or last name...">
+            <button type="button" id="search-button"><i class="fa fa-search"></i></button>
         </div>
+        <div id="search-results" class="search-results"></div>
+          
         <div class="menu-links">
             <a href="menu_tech.html">Home</a>
             <a href="tech_profile.html">Profile</a>
             <a href="tech_schedule.html">Schedule</a>
             <a class="active" href="tech_reservations_menu.html">Reservations</a>
-            <a href="tech_login.html">Logout</a>
+            <a href="login.html">Logout</a>
         </div>
     </div>
 
     <div class="logo-container">
-        <img src="BookMyLab-LandscapeLogo.png" alt="BookMyLab Landscape Logo">
+        <img src="/images/BookMyLab-LandscapeLogo.png" alt="BookMyLab Landscape Logo">
     </div>
 
     <div class="intro">
@@ -30,7 +33,7 @@
     <div class="menu">
         <div class="box">
             <a href="tech_reservations.html">
-                <img src="reserve-student-icon.png" alt="Reserve Student Icon">
+                <img src="/images/reserve-student-icon.png" alt="Reserve Student Icon">
                 <h1>Reserve for a Student</h1>
                 <p>Make reservations for walk-in students.</p>
             </a>
@@ -38,7 +41,7 @@
 
         <div class="box">
             <a href="remove_reservations.html">
-                <img src="remove-reserve-icon.png" alt="Remove Reservation Icon">
+                <img src="/images/remove-reserve-icon.png" alt="Remove Reservation Icon">
                 <h1>Remove Reservations</h1>
                 <p>Remove reservation of students that don't show up within 10 minutes of the appointment time.</p>
             </a>
@@ -46,7 +49,7 @@
 
         <div class="box">
             <a href="tech_edit_reservation.html">
-                <img src="edit-reserve-icon.png" alt="Edit Reservation Icon">
+                <img src="/images/edit-reserve-icon.png" alt="Edit Reservation Icon">
                 <h1>Edit Reservations</h1>
                 <p>Edit any reservations.</p>
             </a>
@@ -54,7 +57,7 @@
 
         <div class="box">
             <a href="view_reservations.html">
-                <img src="view-reserve-icon.png" alt="View Reservations Icon">
+                <img src="/images/view-reserve-icon.png" alt="View Reservations Icon">
                 <h1>See Reservations</h1>
                 <p>View reservation details such as the seat number, laboratory, date and time of request, and date and time of reservation.</p>
             </a>

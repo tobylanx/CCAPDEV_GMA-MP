@@ -6,18 +6,29 @@ function validateForgotPasswordForm() {
         return false;
     }
 
-    alert("A password reset link has been sent to your email address.");
-
-    // put server request code here for mco2
-
-    return true;
+    sendPasswordResetRequest(email);
+    return false;
 }
 
-// for server
 function sendPasswordResetRequest(email) {
-    setTimeout(() => {
-        console.log(`Password reset link sent to ${email}`);
-        // Show a confirmation message to the user
-        alert("A password reset link has been sent to your email address.");
-    }, 1000);
+    fetch('/api/request-password-reset', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ email })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.exists) {
+            alert("A password reset link has been sent to your email address.");
+            window.location.href = `reset_pass.html?email=${encodeURIComponent(email)}`;
+        } else {
+            alert("Email address not found.");
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert("An error occurred while sending the reset link. Please try again.");
+    });
 }

@@ -455,5 +455,38 @@ body, html {
 }
 
 .cancel-btn:hover, .del-btn:hover {
+    
+    
     background-color: #d32f2f;
 }
+
+.search-results {
+    margin-top: 20px;
+  }
+  
+  .user-result {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-result p {
+    margin: 5px 0;
+  }
+  
+  .user-result button {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .user-result button:hover {
+    background-color: #45a049;
+  }
+  

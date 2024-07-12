@@ -1,60 +1,91 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const labSelect = document.getElementById('lab-select');
-    const dateSelect = document.getElementById('date-select');
-    const timeSelect = document.getElementById('time-select');
-    const scheduleGrid = document.getElementById('scheduleGrid');
+  const labSelect = document.getElementById('lab-select');
+  const dateSelect = document.getElementById('date-select');
+  const timeSelect = document.getElementById('time-select');
+  const scheduleGrid = document.getElementById('scheduleGrid');
 
-    const bookings = {
-        'lab1': {
-            '2024-06-06': {
-                '9:00 AM - 9:30 AM': [{ seat: 1, booked: true, user: 'Marsha', userId: '101' }, { seat: 3, booked: true, user: 'Gen', userId: '103' }, { seat: 4, booked: true, user: 'Gela', userId: '102' },{ seat: 5, booked: true, user: 'Nelle', userId: '105' }, { seat: 8,  booked:true, user: 'Therese', userId: '104' }],
-                '9:30 AM - 10:00 AM': [{ seat: 1, booked: false }, { seat: 2, booked: true, user: 'Gela', userId: '102' }]
-            },
-            '2024-06-07': {
-                '9:00 AM - 9:30 AM': [{ seat: 1, booked: true, user: 'Gen', userId: '103' }, { seat: 2, booked: true, user: 'Therese', userId: '104' }]
-            },
-        },
-        'lab2': {
-            '2024-06-06': {
-                '9:00 AM - 9:30 AM': [{ seat: 5, booked: true, user: 'Gen', userId: '103' }, { seat: 8, booked: true, user: 'Therese', userId: '104' }, { seat: 19, booked: true, user: 'Gela', userId: '102' }]
-            }
-        },
-        'lab3': {
-            '2024-06-06': {
-                '9:00 AM - 9:30 AM': [{ seat: 1, booked: true, user: 'Nelle', userId: '105' }, { seat: 10, booked: true, user: 'Angela', userId: '106' }]
-            }
-        }
-    };
+  function setDateRange() {
+    const today = new Date();
+    const nextWeek = new Date(today);
+    nextWeek.setDate(today.getDate() + 7);
 
-    function updateScheduleGrid() {
-        const lab = labSelect.value;
-        const date = dateSelect.value;
-        const time = timeSelect.value;
+    const formatDate = (date) => date.toISOString().split('T')[0];
 
-        const sessionBookings = bookings[lab]?.[date]?.[time] || [];
-        scheduleGrid.innerHTML = '';
+    dateSelect.min = formatDate(today);
+    dateSelect.max = formatDate(nextWeek);
 
-        for (let i = 1; i <= 20; i++) {
-            const booking = sessionBookings.find(b => b.seat === i);
-            const slot = document.createElement('div');
-            slot.className = 'slot ' + (booking?.booked ? 'booked' : 'available');
-            slot.style.padding = '10px';
-            slot.style.margin = '5px';
-            slot.style.textAlign = 'center';
-            slot.style.borderRadius = '5px';
+    dateSelect.value = formatDate(today);
+  }
 
-            if (booking?.booked) {
-                slot.innerHTML = `Seat ${i}: <a href="view_user.html" style="color: inherit; text-decoration: none;">${booking.user}</a>`;
-            } else {
-                slot.textContent = `Seat ${i}: Available`;
-            }
-            scheduleGrid.appendChild(slot);
-        }
+  async function fetchBookings() {
+    const lab = labSelect.value;
+    const date = dateSelect.value;
+    const time = timeSelect.value;
+
+    try {
+      const response = await fetch(`/api/bookings?lab=${encodeURIComponent(lab)}&date=${encodeURIComponent(date)}&time=${encodeURIComponent(time)}`);
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      const bookings = await response.json();
+      console.log('Bookings fetched:', bookings);
+      updateScheduleGrid(bookings);
+    } catch (error) {
+      console.error('Error fetching bookings:', error);
+    }
+  }
+
+  function updateScheduleGrid(bookings) {
+    scheduleGrid.innerHTML = '';
+
+    for (let i = 1; i <= 20; i++) {
+      const booking = bookings.find(b => b.seatnum === i);
+      const slot = document.createElement('div');
+      slot.className = 'slot ' + (booking && booking.reserved ? 'booked' : 'available');
+      slot.style.padding = '10px';
+      slot.style.margin = '5px';
+      slot.style.textAlign = 'center';
+      slot.style.borderRadius = '5px';
+
+      if (booking && booking.reserved) {
+        slot.innerHTML = `Seat ${i}: ${booking.anonymous ? 'Anonymous' : booking.reservedby}`;
+        slot.title = `Reserved on: ${new Date(booking.dateReserved).toLocaleDateString()}`;
+        slot.dataset.userId = booking.reservedby._id; // Ensure this is correctly set
+        slot.addEventListener('click', viewUserProfile); // Add click event listener
+      } else {
+        slot.textContent = `Seat ${i}: Available`;
+        slot.title = '';
+      }
+      scheduleGrid.appendChild(slot);
+    }
+  }
+
+  async function viewUserProfile(event) {
+    const userId = event.currentTarget.dataset.userId;
+
+    if (!userId) {
+      console.error('User ID is undefined');
+      return;
     }
 
-    labSelect.addEventListener('change', updateScheduleGrid);
-    dateSelect.addEventListener('change', updateScheduleGrid);
-    timeSelect.addEventListener('change', updateScheduleGrid);
+    try {
+      const response = await fetch(`/api/user-profile?userId=${userId}`);
+      if (!response.ok) {
+        throw new Error('Failed to fetch user profile');
+      }
+      const user = await response.json();
+      
+      // Redirect to profile page with user data
+      window.location.href = `/view_user.html?userId=${userId}`;
+    } catch (error) {
+      console.error('Error fetching user profile:', error);
+    }
+  }
 
-    updateScheduleGrid();
+  labSelect.addEventListener('change', fetchBookings);
+  dateSelect.addEventListener('change', fetchBookings);
+  timeSelect.addEventListener('change', fetchBookings);
+
+  setDateRange(); // Initialize the date input range and default value
+  fetchBookings(); // Initial load
 });

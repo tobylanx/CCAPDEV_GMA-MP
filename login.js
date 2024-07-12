@@ -1,3 +1,61 @@
+document.addEventListener("DOMContentLoaded", function() {
+    checkLoginStatus();
+});
+
+function validateLoginForm() {
+    let email = document.forms["login"]["dlsuemail"].value;
+    let password = document.forms["login"]["password"].value;
+
+    if (!email.endsWith('@dlsu.edu.ph')) {
+        alert("Please input a registered email");
+        return false;
+    }
+
+    fetch('/login', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ dlsuemail: email, password: password })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.error) {
+            alert(data.error);
+        } else if (data.redirect) {
+            window.location.href = data.redirect;
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('An error occurred while logging in. Please try again.');
+    });
+
+    return false; // Prevent the default form submission
+}
+
+function checkLoginStatus() {
+    const studentLoggedIn = getCookie('studentLoggedIn');
+    const techLoggedIn = getCookie('techLoggedIn');
+
+    if (studentLoggedIn) {
+        window.location.href = 'menu_st.html';
+    } else if (techLoggedIn) {
+        window.location.href = 'menu_tech.html';
+    } else {
+        localStorage.removeItem('loggedIn');
+        localStorage.removeItem('techLoggedIn');
+    }
+}
+
+function logout() {
+    eraseCookie('studentLoggedIn');
+    eraseCookie('techLoggedIn');
+    localStorage.removeItem('loggedIn');
+    localStorage.removeItem('techLoggedIn');
+    window.location.href = 'login.html'; // Redirect to login.html on logout
+}
+
 function setCookie(name, value, days) {
     let expires = "";
     if (days) {
@@ -22,67 +80,3 @@ function getCookie(name) {
 function eraseCookie(name) {
     document.cookie = name + '=; Max-Age=-99999999;';
 }
-function validateLoginForm() {
-    let email = document.forms["login"]["dlsuemail"].value;
-    let password = document.forms["login"]["password"].value;
-
-    const validCredentials = [
-        { email: 'marsha_tarrosa@dlsu.edu.ph', password: 'PQ@123south' },
-        { email: 'angela_tobias@dlsu.edu.ph', password: 'MKT_south456' },
-        { email: 'genelle_chua@dlsu.edu.ph', password: 'MLBNnorth_789' }
-    ];
-
-    if (!email.endsWith('@dlsu.edu.ph')) {
-        alert("Please input a registered email");
-        return false;
-    }
-
-    let isValid = validCredentials.some(function (credential) {
-        return credential.email === email && credential.password === password;
-    });
-
-    if (!isValid) {
-        alert("Invalid email or password");
-        return false;
-    }
-
-    if (remember) {
-        setCookie('studentLoggedIn', 'true', 21);
-    }
-
-    localStorage.setItem('loggedIn', 'true');
-    return true;
-}
-
-function validateTechLoginForm() {
-    let email = document.forms["techLogin"]["techEmail"].value;
-    let password = document.forms["techLogin"]["techPassword"].value;
-
-    const validTechCredentials = [
-        { email: 'tony_bautista@dlsu.edu.ph', password: 'techpassword1' },
-        { email: 'alden_richards@dlsu.edu.ph', password: 'techpassword2' },
-        { email: 'daniel_padilla@dlsu.edu.ph', password: 'techpassword3' }
-    ];
-
-    if (!email.endsWith('@dlsu.edu.ph')) {
-        alert("Please input a registered email");
-        return false;
-    }
-
-    let isValid = validTechCredentials.some(function (credential) {
-        return credential.email === email && credential.password === password;
-    });
-
-    if (!isValid) {
-        alert("Invalid email or password");
-        return false;
-    }
-
-    if (remember) {
-        setCookie('techLoggedIn', 'true', 21);
-    }
-
-    localStorage.setItem('techLoggedIn', 'true');
-    return true;
-}
-

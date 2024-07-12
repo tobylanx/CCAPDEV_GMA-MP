@@ -2,38 +2,41 @@
 <html>
 <head>
     <title>Edit Profile</title>
-    <link rel="stylesheet" href="styles6.css">
-    <script src="st_edit_profile.js"></script>
+    <link rel="stylesheet" href="/css/styles6.css">
+    <script src="/js/profile.js"></script>
+    <script src="/js/search.js" defer></script>
 </head>
 <body>
     <div class="topnav">
         <div class="search-container">
-            <input type="text" placeholder="Search...">
-            <button type="submit"><i class="fa fa-search"></i></button>
+            <input type="text" id="search-input" placeholder="Search by email, first name, or last name...">
+            <button type="button" id="search-button"><i class="fa fa-search"></i></button>
         </div>
+        <div id="search-results" class="search-results"></div>
+          
         <div class="menu-links">
             <a href="menu_st.html">Home</a>
             <a class="active" href="st_profile.html">Profile</a>
             <a href="st_schedule.html">Schedule</a>
             <a href="st_reservations_menu.html">Reservations</a>
-            <a href="st_login.html">Logout</a>
+            <a href="login.html">Logout</a>
         </div>
     </div>
 
     <div class="main-content">
         <h2>Edit Profile</h2>
-        <form class="edit-profile-form" action="st_profile.html" method="post" onsubmit="return validateForm()">
-            <label for="profile-img">Profile Picture:</label>
-            <input type="file" id="profile-img" name="profile-img" accept="image/*">
-            
-            <label for="profile-desc">Profile Description:</label>
-            <textarea id="profile-desc" name="profile-desc" rows="4" cols="50" placeholder="Enter your profile description..."></textarea>
-
+        <form id="edit-profile-form" action="/api/update-profile" method="POST" enctype="multipart/form-data" class="edit-profile-form">
+            <label for="profilepic">Profile Picture:</label>
+            <input type="file" id="profilepic" name="profilepic" accept="image/*">
+      
+            <label for="bio">Bio:</label>
+            <textarea id="bio" name="bio" rows="4" cols="50"></textarea>
+      
             <div class="button-container">
-                <input type="submit" value="Save Changes">
-                <a class="cancel-btn" href="st_profile.html">Cancel</a>
+              <input type="submit" value="Save Changes">
+              <a class="cancel-btn" href="st_profile.html">Cancel</a>
             </div>
-        </form>
+          </form>
     </div>
 </body>
 </html>

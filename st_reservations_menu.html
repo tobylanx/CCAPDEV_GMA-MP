@@ -1,26 +1,29 @@
 <html>
 <head>
 	<title>Manage Reservations</title>
-	<link rel="stylesheet" href="styles2.css">
-    <script src="reserve.js"></script>
+	<link rel="stylesheet" href="/css/styles2.css">
+    <script src="/js/reserve.js"></script>
+    <script src="/js/search.js" defer></script>
 </head>
 <body>
 	<div class="topnav">
         <div class="search-container">
-            <input type="text" placeholder="Search...">
-            <button type="submit"><i class="fa fa-search"></i></button>
+            <input type="text" id="search-input" placeholder="Search by email, first name, or last name...">
+            <button type="button" id="search-button"><i class="fa fa-search"></i></button>
         </div>
+        <div id="search-results" class="search-results"></div>
+
         <div class="menu-links">
             <a href="menu_st.html">Home</a>
             <a href="st_profile.html">Profile</a>
             <a href="st_schedule.html">Schedule</a>
             <a class="active" href="st_reservations_menu.html">Reservations</a>
-            <a href="st_login.html">Logout</a>
+            <a href="login.html">Logout</a>
         </div>
     </div>
 
     <div class="logo-container">
-        <img src="BookMyLab-LandscapeLogo.png" alt="BookMyLab Landscape Logo">
+        <img src="/images/BookMyLab-LandscapeLogo.png" alt="BookMyLab Landscape Logo">
     </div>
 
     <div class="intro">
@@ -30,7 +33,7 @@
     <div class="menu">
         <div class="box">
             <a href="st_reservations.html">
-                <img src="reserve-student-icon.png" alt="Reserve Icon">
+                <img src="/images/reserve-student-icon.png" alt="Reserve Icon">
                 <h1>Reserve a Slot</h1>
                 <p>Make reservations to use the lab.</p>
             </a>
@@ -38,7 +41,7 @@
 
         <div class="box">
             <a href="st_edit_reservation.html">
-                <img src="edit-reserve-icon.png" alt="Edit Reservation Icon">
+                <img src="/images/edit-reserve-icon.png" alt="Edit Reservation Icon">
                 <h1>Edit Reservations</h1>
                 <p>Edit a reservation.</p>
             </a>
@@ -46,7 +49,7 @@
 
         <div class="box">
             <a href="st_reservation_history.html">
-                <img src="see-reserve-icon.png" alt="See Reservation History Icon">
+                <img src="/images/see-reserve-icon.png" alt="See Reservation History Icon">
                 <h1>See Reservation History</h1>
                 <p>View your reservation history.</p>
             </a>

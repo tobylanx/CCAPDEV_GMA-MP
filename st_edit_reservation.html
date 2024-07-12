@@ -1,82 +1,74 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Edit Existing Reservation</title>
-    <link rel="stylesheet" href="styles6.css">
-    <script src="edit_reserve.js"></script>
+  <title>Edit Existing Reservation</title>
+  <link rel="stylesheet" href="/css/styles6.css">
+  <script src="/js/edit_reserve.js" defer></script>
+  <script src="/js/search.js" defer></script>
 </head>
 <body>
-    <div class="topnav">
-        <div class="search-container">
-            <input type="text" placeholder="Search...">
-            <button type="submit"><i class="fa fa-search"></i></button>
-        </div>
-        <div class="menu-links">
-            <a href="menu_st.html">Home</a>
-            <a href="st_profile.html">Profile</a>
-            <a href="st_schedule.html">Schedule</a>
-            <a class="active" href="st_reservations_menu.html">Reservations</a>
-            <a href="st_login.html">Logout</a>
-        </div>
+  <div class="topnav">
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Search by email, first name, or last name...">
+      <button type="button" id="search-button"><i class="fa fa-search"></i></button>
     </div>
-
-    <div class="main-content">
-        <h2>Edit Existing Reservation</h2>
-        <form class="edit-reservation-form" action="st_reservations_menu.html" method="post" id="editReservationForm">
-            <label for="reservation-select">Select Reservation to Edit:</label>
-            <select name="reservation" id="reservation-select" class="reservation-select">
-                <option value="reservation1">Reservation 1 - Lab 1 - Seat 20, Date: 2024-06-01, 12:00-15:00</option>
-                <option value="reservation2">Reservation 2 - Lab 1 - Seat 15, Date: 2024-06-02, 10:00-12:00</option>
-                <option value="reservation3">Reservation 3 - Lab 2 - Seat 03, Date: 2024-06-06, 12:00-12:30</option>
-                <option value="reservation4">Reservation 4 - Lab 2 - Seat 17, Date: 2024-06-10, 3:00-5:00</option>
-                <option value="reservation5">Reservation 5 - Lab 2 - Seat 08, Date: 2024-06-22, 9:00-12:00</option>
-            </select>
-
-            <label for="lab-select">Select a Lab:</label>
-            <select name="lab" class="lab-select">
-                <option value="lab1">Lab 1</option>
-                <option value="lab2">Lab 2</option>
-                <option value="lab3">Lab 3</option>
-            </select>
-
-            <label for="date-select">Select Date:</label>
-            <input type="date" class="date-select" name="date" min="2024-06-01" max="2024-06-07">
-            
-            <label for="time-select">Select Time Slot:</label>
-            <select name="time" class="time-select">
-                <option value="9:00 AM - 9:30 AM">9:00 AM - 9:30 AM</option>
-                <option value="9:30 AM - 10:00 AM">9:30 AM - 10:00 AM</option>
-                <option value="10:00 AM - 10:30 AM">10:00 AM - 10:30 AM</option>
-                <option value="10:30 AM - 11:00 AM">10:30 AM - 11:00 AM</option>
-                <option value="11:00 AM - 11:30 AM">11:00 AM - 11:30 AM</option>
-                <option value="11:30 AM - 12:00 PM">11:30 AM - 12:00 PM</option>
-                <option value="12:00 PM - 12:30 PM">12:00 PM - 12:30 PM</option>
-                <option value="12:30 PM - 1:00 PM">12:30 PM - 1:00 PM</option>
-                <option value="1:00 PM - 1:30 PM">1:00 PM - 1:30 PM</option>
-                <option value="1:30 PM - 2:00 PM">1:30 PM - 2:00 PM</option>
-                <option value="2:00 PM - 2:30 PM">2:00 PM - 2:30 PM</option>
-                <option value="2:30 PM - 3:00 PM">2:30 PM - 3:00 PM</option>
-                <option value="3:00 PM - 3:30 PM">3:00 PM - 3:30 PM</option>
-                <option value="3:30 PM - 4:00 PM">3:30 PM - 4:00 PM</option>
-                <option value="4:00 PM - 4:30 PM">4:00 PM - 4:30 PM</option>
-                <option value="4:30 PM - 5:00 PM">4:30 PM - 5:00 PM</option>
-            </select>
-            
-            <div id="seatContainer">
-                <div class="seat-entry">
-                    <label for="seat-select">Choose Seat ID (1-20):</label>
-                    <input type="number" class="seat-select" min="1" max="20">
-                </div>
-            </div>
-            <div class="bottom-container">
-                <button type="button" class="addSeatButton" id="addSeatButton">Add Another Seat</button>
-            </div>
-            <div class="bottom-container">
-                <input type="submit" value="Save Changes">
-                <a class="cancel-btn" href="st_reservations_menu.html">Cancel</a>
-            </div>
-        </form>
+    <div id="search-results" class="search-results"></div>
+    
+    <div class="menu-links">
+      <a href="menu_st.html">Home</a>
+      <a href="st_profile.html">Profile</a>
+      <a href="st_schedule.html">Schedule</a>
+      <a class="active" href="st_reservations_menu.html">Reservations</a>
+      <a href="login.html">Logout</a>
     </div>
+  </div>
+
+  <div class="main-content">
+    <h2>Edit Existing Reservation</h2>
+    <form class="edit-reservation-form" id="editReservationForm">
+      <label for="reservation-select">Select Reservation to Edit:</label>
+      <select name="reservation" id="reservation-select" class="reservation-select"></select>
+
+      <label for="lab-select">Select a Lab:</label>
+      <select name="lab" class="lab-select">
+        <option value="Goks 123">Goks 123</option>
+        <option value="Goks 234">Goks 234</option>
+        <option value="Goks 345">Goks 345</option>
+        <option value="Goks 456">Goks 456</option>
+        <option value="Goks 567">Goks 567</option>
+      </select>
+
+      <label for="date-select">Select Date:</label>
+      <input type="date" class="date-select" name="date">
+
+      <label for="time-select">Select Time Slot:</label>
+      <select name="time" class="time-select">
+        <option value="9:00 AM - 9:30 AM">9:00 AM - 9:30 AM</option>
+        <option value="9:30 AM - 10:00 AM">9:30 AM - 10:00 AM</option>
+        <option value="10:00 AM - 10:30 AM">10:00 AM - 10:30 AM</option>
+        <option value="10:30 AM - 11:00 AM">10:30 AM - 11:00 AM</option>
+        <option value="11:00 AM - 11:30 AM">11:00 AM - 11:30 AM</option>
+        <option value="11:30 AM - 12:00 PM">11:30 AM - 12:00 PM</option>
+        <option value="12:00 PM - 12:30 PM">12:00 PM - 12:30 PM</option>
+        <option value="12:30 PM - 1:00 PM">12:30 PM - 1:00 PM</option>
+        <option value="1:00 PM - 1:30 PM">1:00 PM - 1:30 PM</option>
+        <option value="1:30 PM - 2:00 PM">1:30 PM - 2:00 PM</option>
+        <option value="2:00 PM - 2:30 PM">2:00 PM - 2:30 PM</option>
+        <option value="2:30 PM - 3:00 PM">2:30 PM - 3:00 PM</option>
+        <option value="3:00 PM - 3:30 PM">3:00 PM - 3:30 PM</option>
+        <option value="3:30 PM - 4:00 PM">3:30 PM - 4:00 PM</option>
+        <option value="4:00 PM - 4:30 PM">4:00 PM - 4:30 PM</option>
+        <option value="4:30 PM - 5:00 PM">4:30 PM - 5:00 PM</option>
+      </select>
+
+      <label for="seat-select">Choose Seat ID (1-20):</label>
+      <input type="number" class="seat-select" name="seat" min="1" max="20">
+
+      <div class="bottom-container">
+        <input type="submit" value="Save Changes">
+        <a class="cancel-btn" href="st_reservations_menu.html">Cancel</a>
+      </div>
+    </form>
+  </div>
 </body>
 </html>
-
