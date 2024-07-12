@@ -62,7 +62,7 @@ To gain access to our MongoDB database, you may paste this [link](mongodb+srv://
 For more information about Node.js, follow this [link](https://nodejs.org/en/learn/getting-started/introduction-to-nodejs).
 
 ### Installing
-To access BookMyLab web application, you may download it through [Google Drive](https://drive.google.com/drive/folders/1QTH2ZntcVWvSNKylNIwiu2YCa3H5ABEa?usp=sharing), [GitHub], or this ZIP file. **(NOT SURE PA IF PWEDE MAG EMBEDD NG FILE + ADD LINKS)**
+To access BookMyLab web application, you may download it through [Google Drive](https://drive.google.com/drive/folders/1QTH2ZntcVWvSNKylNIwiu2YCa3H5ABEa?usp=sharing) or [GitHub](https://github.com/tobylanx/CCAPDEV_GMA-MP.git). 
 
 ### Executing program
 * To start the MongoDB, enter the following commands to your command line interface (CLI),
@@ -103,5 +103,5 @@ Feel free to contact any of the contributors below if you encounter any issues o
 * [Tobias, Angela V.](angela_tobias@dlsu.edu.ph)
 
 
-## Acknowledgments
+
 
