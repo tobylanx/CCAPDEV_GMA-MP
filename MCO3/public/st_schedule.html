@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Schedule and Availability</title>
+    <link rel="stylesheet" href="css/styles4.css">
+    <script src="js/schedule.js"></script>
+    <script src="js/search.js" defer></script>
+</head>
+<body>
+    <div class="topnav">
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search by email, first name, or last name...">
+            <button type="button" id="search-button"><i class="fa fa-search"></i></button>
+        </div>
+        <div id="search-results" class="search-results"></div>
+          
+        <div class="menu-links">
+            <a href="menu_st.html">Home</a>
+            <a href="st_profile.html">Profile</a>
+            <a class="active" href="st_schedule.html">Schedule</a>
+            <a href="st_reservations_menu.html">Reservations</a>
+            <a href="About.html">About</a>
+            <a href="login.html">Logout</a>
+        </div>
+    </div>
+
+    <section class="schedule-section">
+        <h1>Lab Schedule and Availability</h1>
+
+        <div class="selection-area">
+            <label for="lab-select">Select Lab:</label>
+            <select name="lab" id="lab-select" class="lab-select">
+                <option value="Goks 123">Goks 123</option>
+                <option value="Goks 234">Goks 234</option>
+                <option value="Goks 345">Goks 345</option>
+                <option value="Goks 456">Goks 456</option>
+                <option value="Goks 567">Goks 567</option>
+            </select>
+
+            <label for="date-select">Select Date:</label>
+            <input type="date" id="date-select" class="date-select" name="date">
+
+            <label for="time-select">Select Time Slot:</label>
+            <select name="time" id="time-select" class="time-select">
+                <option value="9:00 AM - 9:30 AM">9:00 AM - 9:30 AM</option>
+                <option value="9:30 AM - 10:00 AM">9:30 AM - 10:00 AM</option>
+                <option value="10:00 AM - 10:30 AM">10:00 AM - 10:30 AM</option>
+                <option value="10:30 AM - 11:00 AM">10:30 AM - 11:00 AM</option>
+                <option value="11:00 AM - 11:30 AM">11:00 AM - 11:30 AM</option>
+                <option value="11:30 AM - 12:00 PM">11:30 AM - 12:00 PM</option>
+                <option value="12:00 PM - 12:30 PM">12:00 PM - 12:30 PM</option>
+                <option value="12:30 PM - 1:00 PM">12:30 PM - 1:00 PM</option>
+                <option value="1:00 PM - 1:30 PM">1:00 PM - 1:30 PM</option>
+                <option value="1:30 PM - 2:00 PM">1:30 PM - 2:00 PM</option>
+                <option value="2:00 PM - 2:30 PM">2:00 PM - 2:30 PM</option>
+                <option value="2:30 PM - 3:00 PM">2:30 PM - 3:00 PM</option>
+                <option value="3:00 PM - 3:30 PM">3:00 PM - 3:30 PM</option>
+                <option value="3:30 PM - 4:00 PM">3:30 PM - 4:00 PM</option>
+                <option value="4:00 PM - 4:30 PM">4:00 PM - 4:30 PM</option>
+                <option value="4:30 PM - 5:00 PM">4:30 PM - 5:00 PM</option>
+            </select>
+        </div>
+
+        <div class="legend">
+            <div class="legend-item">
+                <span class="color-box available"></span> Available
+            </div>
+            <div class="legend-item">
+                <span class="color-box booked"></span> Booked
+            </div>
+        </div>
+
+        <div class="schedule-grid" id="scheduleGrid"></div>
+    </section>
+</body>
+</html>

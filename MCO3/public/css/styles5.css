@@ -1,0 +1,217 @@
+/*CSS Styles for Profile Technician and Student*/
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #e1ebf6;
+    color: #333;
+    font-size: 16px;
+    height: 100%;
+}
+
+.topnav {
+    background-color: #3a6da0;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu-links {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu-links a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-links a:hover {
+    background-color: #79bbc3;
+    color: white;
+}
+
+.menu-links a.active {
+    background-color: #79bbc3;
+    color: white;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-container input[type=text] {
+    padding: 10px;
+    margin: 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search-container button {
+    padding: 10px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.search-results {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 300px;
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    display: none;
+    visibility: hidden; 
+}
+
+.user-result {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.user-result:hover {
+    background-color: #f1f1f1;
+}
+
+.user-result p {
+    margin: 5px 0;
+}
+
+.user-result button {
+    align-self: flex-start;
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.sidebar {
+    width: 250px;
+    position: absolute;
+    height: 100vh;
+    background-color: #1c4b7a;
+    padding: 20px;
+    text-align: center;
+}
+
+.sidebar .link {
+    text-align: left;
+}
+
+.technician-profile img.profile-img, .student-profile img.profile-img, .user-profile img.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    margin-bottom: 10px;
+    border: 4px solid #98ccef;
+}
+
+.technician-bio, .student-bio, .user-bio {
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 1.6;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.technician-profile h3, .student-profile h3, .user-profile h3, .technician-profile a, .student-profile a{
+    color: #ffffff;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.technician-profile a, .student-profile a{
+    text-decoration: none;
+    color: #bce5f5;
+    font-weight: 600;
+}
+
+.technician-profile a:hover, .student-profile a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.main-content {
+    margin-left: 280px;
+    padding: 20px;
+    background-color: #e1ebf6;
+    min-height: 100vh;
+}
+
+.main-content h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #98ccef;
+    padding-bottom: 10px;
+}
+
+.reservations-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.reservations-list li {
+    background-color: #bce5f5;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-results {
+    margin-top: 20px;
+  }
+  
+  .user-result {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-result p {
+    margin: 5px 0;
+  }
+  
+  .user-result button {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .user-result button:hover {
+    background-color: #45a049;
+  }
+  

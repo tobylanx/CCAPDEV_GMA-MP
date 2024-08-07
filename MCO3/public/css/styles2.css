@@ -1,0 +1,212 @@
+/*CSS Styles for Reservations Menu Technician and Student*/
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #e1ebf6;
+    color: #333;
+    font-size: 16px;
+    height: 100%;
+}
+
+.topnav {
+    background-color: #3a6da0;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu-links {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu-links a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-links a:hover {
+    background-color: #79bbc3;
+    color: white;
+}
+
+.menu-links a.active {
+    background-color: #79bbc3;
+    color: white;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-container input[type=text] {
+    padding: 10px;
+    margin: 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search-container button {
+    padding: 10px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.search-results {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 300px;
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    display: none;
+    visibility: hidden;
+}
+
+.user-result {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.user-result:hover {
+    background-color: #f1f1f1;
+}
+
+.user-result p {
+    margin: 5px 0;
+}
+
+.user-result button {
+    align-self: flex-start;
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.intro {
+    text-align: center;
+    padding: 10px 40px;
+    background-color: #f7f9fc;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+
+.intro h1 {
+    color: #2c3e50;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.box {
+    background-color: #79bbc3;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 40px 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.box:hover {
+    background-color: #98ccef;
+    transform: scale(1.05);
+}
+
+.box a {
+    text-decoration: none;
+    color: #2E86C1;
+    display: block;
+}
+
+.box img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.box h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.box p {
+    margin: 10px;
+    color: #555;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo-container img {
+    width: 400px;
+    height: auto;
+}
+
+.search-results {
+    margin-top: 20px;
+  }
+  
+  .user-result {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-result p {
+    margin: 5px 0;
+  }
+  
+  .user-result button {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .user-result button:hover {
+    background-color: #45a049;
+  }
+  

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View All Reservations</title>
+    <link rel="stylesheet" href="css/styles6.css">
+    <link rel="stylesheet" href="css/view_all_reservations.css">
+    <script src="js/view_reserve.js" defer></script>
+    <script src="js/search.js" defer></script>
+</head>
+<body>
+    <div class="topnav">
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search by email, first name, or last name...">
+            <button type="button" id="search-button"><i class="fa fa-search"></i></button>
+        </div>
+        <div id="search-results" class="search-results"></div>
+          
+        <div class="menu-links">
+            <a href="menu_tech.html">Home</a>
+            <a href="tech_profile.html">Profile</a>
+            <a href="tech_schedule.html">Schedule</a>
+            <a class="active" href="tech_reservations_menu.html">Reservations</a>
+            <a href="About.html">About</a>
+            <a href="login.html">Logout</a>
+        </div>
+    </div>
+    <div class="main-content">
+        <section class="see-reservations">
+            <h1>All Reservations</h1>
+            <div class="reservations" id="reservations-container">
+                <table id="reservations-table">
+                    <thead>
+                        <tr>
+                            <th>Lab</th>
+                            <th>Seat</th>
+                            <th>Reserved by</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </div>
+            <button class="back-button" onclick="location.href='tech_reservations_menu.html'">Back to Reservation Menu</button>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/styles3.css">
+    <script src="js/forgot_pass.js"></script>
+    <title>Forgot Password</title>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img src="images/BookMyLab-SquareLogo.png" alt="BookMyLab Square Logo">
+        </div>
+        <h2>Forgot Password</h2>
+        <form name="forgot_password" action="reset_pass.html" method="post" onsubmit="return validateForgotPasswordForm()">
+            <div class="input-box">
+                <label for="dlsuemail">Enter Your Email</label>
+                <input type="email" name="dlsuemail" placeholder="Enter your email" required>
+            </div>
+            <div class="button-container">
+                <input type="submit" name="submit" value="Submit" class="register-btn">
+            </div>
+        </form>
+        <div class="register">
+            <p>Remembered your password? <a href="login.html">Login</a></p>
+        </div>
+    </div>
+</body>
+</html>

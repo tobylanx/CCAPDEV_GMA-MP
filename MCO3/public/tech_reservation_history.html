@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reservation History</title>
+    <link rel="stylesheet" href="css/styles6.css">
+    <script src="js/reservation_history.js"></script>
+    <script src="js/search.js" defer></script>
+</head>
+<body>
+    <div class="topnav">
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search by email, first name, or last name...">
+            <button type="button" id="search-button"><i class="fa fa-search"></i></button>
+        </div>
+        <div id="search-results" class="search-results"></div>
+          
+        <div class="menu-links">
+            <a href="menu_tech.html">Home</a>
+            <a class="active" href="tech_profile.html">Profile</a>
+            <a href="tech_schedule.html">Schedule</a>
+            <a href="tech_reservations_menu.html">Reservations</a>
+            <a href="About.html">About</a>
+            <a href="login.html">Logout</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h2>Reservation History</h2>
+        <ul id="reservation-history-list" class="reservation-history-list"></ul>
+        <button class="back-button" onclick="location.href='st_reservations_menu.html'">Back to Reservation Menu</button>
+    </div>
+</body>
+</html>

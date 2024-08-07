@@ -1,0 +1,44 @@
+<html>
+<head>
+	<title>Technician Profile</title>
+	<link rel="stylesheet" href="css/styles5.css">
+    <script src="js/profile.js"></script>
+    <script src="js/search.js" defer></script>
+</head>
+<body>
+    <div class="topnav">
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search by email, first name, or last name...">
+            <button type="button" id="search-button"><i class="fa fa-search"></i></button>
+        </div>
+        <div id="search-results" class="search-results"></div>
+          
+        <div class="menu-links">
+            <a href="menu_tech.html">Home</a>
+            <a class="active" href="tech_profile.html">Profile</a>
+            <a href="tech_schedule.html">Schedule</a>
+            <a href="tech_reservations_menu.html">Reservations</a>
+            <a href="About.html">About</a>
+            <a href="login.html">Logout</a>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <div class="technician-profile">
+            <img src="/uploads/<%= user.profile.profilepic %>" alt="Profile Picture" class="profile-img">
+            <h3 id="name"></h3>
+            <p id="bio" class="bio"></p>
+            <div class="link">
+                <a href="tech_edit_profile.html">Edit Profile</a>
+                <a href="tech_reservation_history.html">Reservation History</a>
+                <a href="tech_delete_profile.html">Delete Profile</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h2>Current Reservations</h2>
+        <ul id="current-reservations" class="reservations-list"></ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Remove Reservation</title>
+    <link rel="stylesheet" href="css/styles6.css">
+    <script src="js/remove_reserve.js" defer></script>
+</head>
+<body>
+    <div class="topnav">
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search by email, first name, or last name...">
+            <button type="button" id="search-button"><i class="fa fa-search"></i></button>
+        </div>
+        <div id="search-results" class="search-results"></div>
+          
+        <div class="menu-links">
+            <a href="menu_tech.html">Home</a>
+            <a href="tech_profile.html">Profile</a>
+            <a href="tech_schedule.html">Schedule</a>
+            <a class="active" href="tech_reservations_menu.html">Reservations</a>
+            <a href="About.html">About</a>
+            <a href="login.html">Logout</a>
+        </div>
+    </div>
+    <section class="main-content">
+        <h1>Remove Reservation</h1>
+        <form class="remove-reservation-form" method="post" id="removeReservationForm">
+            <label for="reservation-select">Select Reservation to Remove:</label>
+            <select id="reservation-select" name="reservationId">
+
+            </select>
+            <div class="bottom-container">
+                <input type="submit" value="Save Changes">
+                <a class="cancel-btn" href="tech_reservations_menu.html">Cancel</a>
+            </div>
+        </form> 
+    </section>
+</body>
+</html>

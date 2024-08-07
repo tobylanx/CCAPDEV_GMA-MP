@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/styles3.css">
+        <script src="js/registration.js"></script>
+        <title>BookMyLab Registration</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="logo-container">
+                <img src="images/BookMyLab-SquareLogo.png" alt="BookMyLab Square Logo">
+            </div>
+            <h2>Registration Form</h2>
+            <form name="registration" action="register" method="post" onsubmit="return validateForm()">
+                <div class="input-box">
+                    <label for="dlsuemail">E-mail:</label>
+                    <input type="email" id="dlsuemail" name="dlsuemail" required>
+                </div>
+                <div class="input-box">
+                    <label for="firstname">First Name:</label>
+                    <input type="text" id="firstname" name="firstname" required>
+                </div>
+                <div class="input-box">
+                    <label for="lastname">Last Name:</label>
+                    <input type="text" id="lastname" name="lastname" required>
+                </div>
+                <div class="input-box">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="input-box">
+                    <label for="role">Role:</label>
+                    <select id="role" name="role" required>
+                        <option value="">Select Role</option>
+                        <option value="student">Student</option>
+                        <option value="technician">Technician</option>
+                    </select>
+                </div>
+                <div class="button-container">
+                    <input type="submit" name="register" value="Register" class="register-btn">
+                </div>
+            </form>
+            <p id="message" class="hidden"></p>
+            <div class="login">
+                <p>Already have an account? <a href="login.html">Login</a></p>
+            </div>
+        </div>
+    </body>
+    </html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Existing Reservation</title>
+  <link rel="stylesheet" href="css/styles6.css">
+  <script src="js/edit_reserve.js" defer></script>
+  <script src="js/search.js" defer></script>
+</head>
+<body>
+  <div class="topnav">
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Search by email, first name, or last name...">
+      <button type="button" id="search-button"><i class="fa fa-search"></i></button>
+    </div>
+    <div id="search-results" class="search-results"></div>
+    
+    <div class="menu-links">
+      <a href="menu_st.html">Home</a>
+      <a href="st_profile.html">Profile</a>
+      <a href="st_schedule.html">Schedule</a>
+      <a class="active" href="st_reservations_menu.html">Reservations</a>
+      <a href="About.html">About</a>
+      <a href="login.html">Logout</a>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <h2>Edit Existing Reservation</h2>
+    <form class="edit-reservation-form" id="editReservationForm">
+      <input type="hidden" id="reservation-id" name="reservationId" />
+      
+      <label for="reservation-select">Select Reservation to Edit:</label>
+      <select name="reservation" id="reservation-select" class="reservation-select"></select>
+
+      <label for="lab-select">Select a Lab:</label>
+      <select name="lab" id="lab-select" class="lab-select">
+        <option value="Goks 123">Goks 123</option>
+        <option value="Goks 234">Goks 234</option>
+        <option value="Goks 345">Goks 345</option>
+        <option value="Goks 456">Goks 456</option>
+        <option value="Goks 567">Goks 567</option>
+      </select>
+
+      <label for="date-select">Select Date:</label>
+      <select id="date-select" class="date-select" name="date"></select>
+
+      <label for="time-select">Select Time Slot:</label>
+      <select name="time" id="time-select" class="time-select"></select>
+
+      <div id="seatContainer">
+        <div class="seat-entry">
+          <label for="seat-select">Choose Seat ID (1-20):</label>
+          <select class="seat-select" name="seat"></select>
+        </div>
+      </div>
+
+      <div class="bottom-container">
+        <button type="button" class="addSeatButton" id="addSeatButton">Add Another Seat</button>
+      </div>
+
+      <div class="bottom-container">
+        <div class="anonymous-check-container">
+          <input type="checkbox" class="anonymous-check" name="anonymous" id="anonymous-check">
+          <label for="anonymous-check">Anonymous Reservation</label>
+        </div>
+      </div>
+
+      <div class="bottom-container">
+        <input type="submit" value="Reserve">
+        <button type="button" class="cancel-btn" onclick="location.href='st_reservations_menu.html'">Cancel</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

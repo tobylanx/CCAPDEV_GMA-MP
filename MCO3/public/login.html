@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/styles3.css">
+    <script src="js/login.js"></script>
+    <title>BookMyLab Login</title>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img src="images/BookMyLab-SquareLogo.png" alt="BookMyLab Square Logo">
+        </div>
+        <h2>Login Your Account</h2>
+        <form name="login" onsubmit="return validateLoginForm()">
+            <div class="input-box">
+                <label for="dlsuemail">E-mail</label>
+                <input type="email" name="dlsuemail" required>
+            </div>
+            <div class="input-box">
+                <label for="password">Password</label>
+                <input type="password" name="password" required>
+            </div>
+            <div class="form-footer">
+                <label>
+                    <input type="checkbox" name="remember"> Remember Me
+                </label>
+                <a href="forgot_pass.html">Forgot Password?</a>
+            </div>
+            <div class="button-container">
+                <input type="submit" name="login" value="Login" class="login-btn">
+            </div>
+        </form>
+        <div class="register">
+            <p>No Account? <a href="index.html">Register</a></p>
+        </div>
+    </div>
+</body>
+</html>

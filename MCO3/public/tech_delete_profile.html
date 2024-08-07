@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Profile</title>
+    <link rel="stylesheet" href="css/styles6.css">
+    <script src="js/delete_profile.js" defer></script>
+    <script src="js/search.js" defer></script>
+</head>
+<body>
+    <div class="topnav">
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search by email, first name, or last name...">
+            <button type="button" id="search-button"><i class="fa fa-search"></i></button>
+        </div>
+        <div id="search-results" class="search-results"></div>
+          
+        <div class="menu-links">
+            <a href="menu_tech.html">Home</a>
+            <a class="active" href="tech_profile.html">Profile</a>
+            <a href="tech_schedule.html">Schedule</a>
+            <a href="tech_reservations_menu.html">Reservations</a>
+            <a href="About.html">About</a>
+            <a href="login.html">Logout</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h2>Delete Profile</h2>
+        <form class="delete-profile-form" id="deleteProfileForm">
+            <label for="email">Confirm Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="password">Confirm Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+            <div class="bottom-container">
+                <input type="submit" class="del-btn" value="Delete Account">
+                <button type="button" class="cancel-btn" onclick="location.href='tech_profile.html'">Cancel</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
